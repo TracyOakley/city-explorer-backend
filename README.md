@@ -23,11 +23,17 @@ Start time: 2:00
 Finish time: 3:00
 Actual time needed to complete: 1 hour
 
-Name of feature: Setup Server Repo
+Name of feature: Create Express Routes
 Estimate of time needed to complete: 1 hour
-Start time: 2:00
-Finish time: 3:00
-Actual time needed to complete: 1 hour
+Start time: 3:30
+Finish time: 5:00
+Actual time needed to complete: 1.5 hour
+
+Name of feature: Create Frontend Weather Component and Request
+Estimate of time needed to complete: 1 hour
+Start time: 5:00
+Finish time: 6:30
+Actual time needed to complete: 1.5 hour
 
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 

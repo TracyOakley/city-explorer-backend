@@ -1,0 +1,25 @@
+{
+  "name": "city-explorer-backend",
+  "version": "1.0.0",
+  "description": "Back end API for the city explorer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TracyOakley/city-explorer-backend.git"
+  },
+  "author": "Tracy Oakley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TracyOakley/city-explorer-backend/issues"
+  },
+  "homepage": "https://github.com/TracyOakley/city-explorer-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}

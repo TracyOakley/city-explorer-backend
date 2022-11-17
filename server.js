@@ -2,7 +2,7 @@
 
 console.log('our first server');
 
-const { response } = require('express');
+//const { response } = require('express');
 // REQUIRE
 // in our servers, we have to use 'require' instead of 'import'
 // Here we will list the requirments for a server
@@ -45,7 +45,7 @@ app.get('/', (request, response) => {
 
 app.get('/sayHello', (request, response)=> {
   console.log(request.query.name);
-  let lastName = request.query.lastName
+  let lastName = request.query.lastName;
   response.send(`Hi ${request.query.name} ${lastName}`);
 });
 

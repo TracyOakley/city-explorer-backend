@@ -112,7 +112,7 @@ app.get('*', (request, response) => {
 
 // ERRORS
 // handle any errors
-app.use((error, request, response, next) => {
+app.use((error, request, response) => {
   response.status(500).send(error.message);
 });
 

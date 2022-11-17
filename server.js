@@ -8,7 +8,7 @@ const { response } = require('express');
 // Here we will list the requirments for a server
 
 const express = require('express');
-let data = require('./data/weather.json');
+//let data = require('./data/weather.json');
 
 
 // we need to bring in our .env file, so we'll use this after we have installed
@@ -17,6 +17,7 @@ require('dotenv').config();
 
 // we must include CORS if we want to share resources over the web
 const cors = require('cors');
+const axios = require('axios');
 
 // USE
 // once we have required something, we have to use it
@@ -48,28 +49,60 @@ app.get('/sayHello', (request, response)=> {
   response.send(`Hi ${request.query.name} ${lastName}`);
 });
 
-app.get('/weather', (request, response, next) => {
+app.get('/weather', async (request, response, next) => {
   try {
-    let city = request.query.cityName;
+    //let city = request.query.cityName;
+    //console.log(`THisOne: ${request.query.lat}`);
 
-    let selectedCity = data.find(weather => weather.city_name === city);
+    let cityLat = request.query.lat;
+    let cityLon = request.query.lon;
 
-    if(selectedCity === undefined){
-      throw(500);
-    }
+    
+
+    //  let selectedCity = data.find(weather => weather.city_name === city);
+
+    let cityURL = `http://api.weatherbit.io/v2.0/forecast/daily?key=${process.env.WEATHERBIT_API_KEY}&units=I&lat=${cityLat}&lon=${cityLon}&days=3`;
+
+    //console.log(cityURL);
+
+    let selectedCity = await axios.get(cityURL);
+
 
     let cityCleanedUp = [];
 
-    for(let i =0; i< selectedCity.data.length;i++){
-      cityCleanedUp.push(new Forecast(selectedCity,i));
-    }
+    cityCleanedUp = selectedCity.data.data.map(day => new Forecast(day));
+
+    //console.log(cityCleanedUp);
     
     response.send(cityCleanedUp);
+
   } catch (error) {
     // create a new instance of the Error object that lives in Express
     next(error);
   }
-})
+});
+
+app.get('/movie', async (request, response, next) => {
+  try {
+    let city = request.query.cityName;
+  
+    let movieURL = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&language=en-US&query=${city}&page=1&include_adult=false`;
+
+    //console.log(movieURL);
+
+    let selectedMovies = await axios.get(movieURL);
+
+    let movieCleanedUp = [];
+
+    movieCleanedUp = selectedMovies.data.results.map(movie => new Movie(movie));
+    
+    response.send(movieCleanedUp);
+
+  } catch (error) {
+    // create a new instance of the Error object that lives in Express
+    next(error);
+  }
+});
 
 // '*' wild card
 // this will run for any route not defined above
@@ -85,9 +118,21 @@ app.use((error, request, response, next) => {
 
 // CLASSES
 class Forecast {
-  constructor(cityObject,day) {
-    this.date = cityObject.data[day].valid_date;
-    this.description = cityObject.data[day].weather.description;
+  constructor(cityObject) {
+    this.date = cityObject.valid_date;
+    this.description = cityObject.weather.description;
+  }
+}
+
+class Movie {
+  constructor(movieObject) {
+    this.title = movieObject.title;
+    this.overview = movieObject.overview;
+    this.vote_average =movieObject.vote_average;
+    this.vote_count=movieObject.vote_count;
+    this.image_url= movieObject.poster_path;
+    this.popularity= movieObject.popularity;
+    this.released_on= movieObject.released_date;
   }
 }
 

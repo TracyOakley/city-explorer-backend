@@ -3,6 +3,14 @@ back end express based server on Render
 
 # city-explorer-backend (OR city-explorer-API)
 
+### LAB 8 WRRC
+
+![LAB 8 WRRC](/imgs/Lab8WRRC.png)
+
+### Lab 7 WRRC
+
+![LAB 7 WRRC](/imgs/Lab7WRRCFixed.png)
+
 **Author**: Tracy Oakley
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 

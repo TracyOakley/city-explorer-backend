@@ -7,6 +7,29 @@ back end express based server on Render
 
 ![LAB 8 WRRC](/imgs/Lab8WRRC.png)
 
+## Change Log
+
+Name of feature: Change weather Server from data to API
+Estimate of time needed to complete: 1 hour
+Start time: 3:00
+Finish time: 5:00
+Actual time needed to complete: 2 hour
+
+Name of feature: Incorporate new Movie API
+Estimate of time needed to complete: 1 hour
+Start time: 5:00
+Finish time: 6:30
+Actual time needed to complete: 1.5 hour
+
+Name of feature: Deploy to External Server
+Estimate of time needed to complete: 1 hour
+Start time: 6:30
+Finish time: ?
+Actual time needed to complete: ?
+
+
+
+
 ### Lab 7 WRRC
 
 ![LAB 7 WRRC](/imgs/Lab7WRRCFixed.png)

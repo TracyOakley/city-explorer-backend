@@ -12,8 +12,8 @@ back end express based server on Render
 Name of feature: Modularize the Server Routes into Functions
 Estimate of time needed to complete: 1 hour
 Start time: 3:00
-Finish time: 
-Actual time needed to complete: 2 hour
+Finish time: 3:30
+Actual time needed to complete: 30 minutes
 
 
 ### LAB 8 WRRC

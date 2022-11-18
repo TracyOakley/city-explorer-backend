@@ -3,6 +3,19 @@ back end express based server on Render
 
 # city-explorer-backend (OR city-explorer-API)
 
+### Lab 9 WRRC
+
+![Lab 9 WRRC](/imgs/Lab9WRRC.png)
+
+## Change Log
+
+Name of feature: Modularize the Server Routes into Functions
+Estimate of time needed to complete: 1 hour
+Start time: 3:00
+Finish time: 
+Actual time needed to complete: 2 hour
+
+
 ### LAB 8 WRRC
 
 ![LAB 8 WRRC](/imgs/Lab8WRRC.png)
@@ -24,8 +37,8 @@ Actual time needed to complete: 1.5 hour
 Name of feature: Deploy to External Server
 Estimate of time needed to complete: 1 hour
 Start time: 6:30
-Finish time: ?
-Actual time needed to complete: ?
+Finish time: 7:30
+Actual time needed to complete: 1 hour
 
 
 

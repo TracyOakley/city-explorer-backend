@@ -85,3 +85,5 @@ Actual time needed to complete: 1.5 hour
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+Sheyna Watkins figured out that Render wants npm start and not npm build :)

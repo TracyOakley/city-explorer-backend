@@ -3,6 +3,16 @@ back end express based server on Render
 
 # city-explorer-backend (OR city-explorer-API)
 
+### Lab 10 WRRC
+
+![Lab 1 WRRC](/imgs/Lab10WRRC.png)
+
+Name of feature: Use given starter code and include a cache
+Estimate of time needed to complete: 2 hour
+Start time: 3:30
+Finish time: 5:00
+Actual time needed to complete:  1.5 hour
+
 ### Lab 9 WRRC
 
 ![Lab 9 WRRC](/imgs/Lab9WRRC.png)
